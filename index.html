@@ -11,9 +11,11 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
-    <!-- <script src="https://docs.opencv.org/master/opencv.js"></script> -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="botcssnew.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://docs.opencv.org/master/opencv.js"></script> -->
+     <link rel="stylesheet" href="botcssnew.css">
 
 </head>
 <body>
@@ -34,134 +36,79 @@
                 <button class="t-Button t-Button--hot t-Button--large t-Button--stretch" type="button" id="start-chatnew"><span class="t-Button-label">Start chat</span></button>
             </form>
         </div>
-        <div id="headernew">
-            <div style="cursor:pointer;"><i id="back-button" class="text-lightnew btn-transparent btn-icon fa fa-close"></i></div>
-            <div class="text-lightnew align-centernew">
-                <h2> EVA AI Copilot </h2>
-            </div>
-            <div>
-                <i id="av-iconn" class="text-light btn-transparent btn-icon fa fa-bars" style="cursor:pointer;"></i>
-                <nav id="nav-containernew" style="display: none; text-align: left;">
-                    <ul class="nav">
-                        <li id="normal-size" class="nav-link"><span >1.</span> Normal Size</li>
-                        <li id="medium-size" class="nav-link"><span >2.</span> Medium Size</li>
-                        <li id="large-size" class="nav-link"><span >3.</span> Large Size</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+
+  <div id="headernew">
+    <div class="text-lightnew align-centernew">
+        <h2>EVA</h2>
+    </div>
+    <div>
+        <i id="av-iconn" class="btn-icon fa fa-bars"></i>
+        <nav id="nav-containernew">
+            <ul class="nav">
+                <li id="normal-size" class="nav-link"><span>1.</span> Normal Size</li>
+                <li id="medium-size" class="nav-link"><span>2.</span> Medium Size</li>
+                <li id="large-size" class="nav-link"><span>3.</span> Large Size</li>
+            </ul>
+        </nav>
+        <i id="back-button" class="btn-icon fa fa-close"></i>
+    </div>
+</div>
+
         <div id="message-boardnew">
     <div class="post post-bot loadslownew a1" style="display: none;">
         <!-- Hello <span id="global-user-name">&SESSION_USER_NAME.</span>, I am EVA, your ebizframe virtual assistant. How can I assist you today? -->
        <span id="botMessage"></span>
-        <div class="bott" style="position: absolute;top: 0px; left: -43px;"><img src="#APP_FILES#chat_bot_icon.png" alt="bot" width="30" height="30"></div>
-        <!-- Add buttons here -->
-        <!-- <div class="response-buttons" style="margin-top: 10px;">
-            <button id="yes-btn" class="response-button" type="butten">Yes</button>
-            <button id="no-btn" class="response-button" type="butten">No</button>
-        </div> -->
+       <div class="bott" style="position: absolute;top: -8px; left: -57px;"><img src="#APP_FILES#chat_bot_icon.gif" alt="bot" width="69" height="69"></div>
     </div>
 </div>
-</div>
-        <div id="formnew">
+
+<div id="formnew">
             <div id="messagenew1">
-                <div><i id="attach" class="btn-transparent btn-icon fa fa-paperclip"></i></div>
+                <div id="voice-container">
+                  <i id="voice" class="btn-transparent btn-icon fa fa-microphone" aria-hidden="true"></i>
+                     <div id="dots" class="dots">
+                     <div class="dot"></div>
+                     <div class="dot"></div>
+                     <div class="dot"></div>
+                </div>
+                </div>
+                 <!-- <div><i id="voice" class="btn-transparent btn-icon fa fa-microphone" aria-hidden="true"></i></div> -->
+                <!-- <div><i id="attach" class="btn-transparent btn-icon fa fa-paperclip"></i></div> -->
                 <input type="file" id="fileInput" style="display: none;">
                 <div id="messagenew" contenteditable></div>
                 <div><i id="sendnew" class="btn-transparent btn-icon fa fa-paper-plane"></i></div>
+                <div><i id="attach" class="btn-transparent btn-icon fa fa-paperclip"></i></div>
             </div>
-            <div><i id="voice" class="btn-transparent btn-icon fa fa-microphone" aria-hidden="true"></i></div>
+           
             
         </div>
+</div>
+        
     </div>
 </div>
 
 <script>
 $(document).ready(function() {
-    // var recognition = new (webkitSpeechRecognition || SpeechRecognition)();
-    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    var recognition = new (webkitSpeechRecognition || SpeechRecognition)();
+    // const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
     recognition.lang = 'en-US';
     recognition.continuous = false;
     recognition.interimResults = false;
 
     let isRecognitionInProgress = false;
-    let finalTranscript = '';
-
-    // recognition.onresult = function(event) {
-    //     // var command = event.results[0][0].transcript.toLowerCase();
-    //      const command = event.results[0][0].transcript.toLowerCase().trim();
-    //     $('#messagenew').text(command);
-    //     $('#sendnew').click(); 
-    // };
-
-    //    recognition.onresult = function(event) {
-    //     const command = event.results[0][0].transcript.toLowerCase().trim();
-    //     console.log('Command received:', command);
-        
-    //     // Stop the recognition while processing the command to avoid interference
-    //     // recognition.stop();
-        
-    //     $('#messagenew').text(command);
-    //     $('#sendnew').click();  // Automatically trigger send
-
-    //     // Restart the recognition after processing
-    //     setTimeout(() => {
-    //         recognition.start();
-    //     }, 500);  // Delay to allow processing of the current command
-    // };
+    var fetchedData;
 
     recognition.onresult = function(event) {
-        let interimTranscript = '';
-
-        // Loop through results to capture both final and interim transcripts
-        for (let i = event.resultIndex; i < event.results.length; i++) {
-            if (event.results[i].isFinal) {
-                finalTranscript += event.results[i][0].transcript.trim();
-                console.log("Final Transcript: ", finalTranscript);
-
-                // Send the final transcript as a command
-                $('#messagenew').text(finalTranscript);
-                $('#sendnew').click();
-                
-                // Reset after sending
-                finalTranscript = '';
-            } else {
-                interimTranscript += event.results[i][0].transcript.trim();
-                console.log("Interim Transcript: ", interimTranscript);
-            }
-        }
-
-        // Display interim transcript if still processing short words
-        if (interimTranscript.length > 0) {
-            $('#messagenew').text(interimTranscript);
-        }
+        var command = event.results[0][0].transcript.toLowerCase();
+        $('#messagenew').text(command);
+        $('#sendnew').click(); 
     };
 
     recognition.onstart = function() {
         $('#voice').addClass('active');
-         console.log('Speech recognition started.');
-        isRecognitionActive = true;
     };
 
     recognition.onend = function() {
-        $('#voice').removeClass('active');
-        isRecognitionInProgress = false;
-    };
-
-    // recognition.onend = function() {
-    //     $('#voice').removeClass('active');
-    //     console.log('Speech recognition ended.');
-    //     if (isRecognitionActive) {
-    //         // Automatically restart if recognition is still active
-    //         setTimeout(() => {
-    //             recognition.start();
-    //         }, 500);
-    //     }
-    // };
-
-     // Handle speech recognition errors
-    recognition.onerror = function(event) {
-        console.error('Speech recognition error:', event.error);
         $('#voice').removeClass('active');
         isRecognitionInProgress = false;
     };
@@ -170,19 +117,23 @@ $(document).ready(function() {
         if (!isRecognitionInProgress) {
             recognition.start();
             isRecognitionInProgress = true;
-            console.log('Voice recognition activated.');
         } else {
             recognition.stop();
             isRecognitionInProgress = false;
-            console.log('Voice recognition deactivated.');
         }
     });
 
-    // $(document).on('click', '.option1', function(event) {
-    //     var number = $(this).data('number');
-    //     $('#messagenew').text(number);
-    //     $('#sendnew').click();
-    // });
+    const voiceContainer = document.getElementById('voice-container');
+
+voiceContainer.addEventListener('click', () => {
+    // Add the active class to show dots and hide the mic
+    voiceContainer.classList.add('active');
+
+    // Remove the active class after 5 seconds to revert to the mic icon
+    setTimeout(() => {
+        voiceContainer.classList.remove('active');
+    }, 5000); // 5 seconds
+});
 
     $('#yes-btn').on('click', function (event) {
         event.preventDefault();  // Prevent default action
@@ -212,7 +163,9 @@ $(document).ready(function() {
 });
 </script>
 
-<script src="bot.js"></script>
-
 </body>
 </html>
+
+
+
+
