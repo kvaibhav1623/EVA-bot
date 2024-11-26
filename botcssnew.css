@@ -1,7 +1,7 @@
 .t-Header-logo-link{
     pointer-events: none !important;
 }
-#landingnew{
+#landingSales{
     display: none !important;
     background-color: #007bff;
     color: #ffffff;
@@ -61,7 +61,7 @@
 .loadslow{
     display: none;
 }
-.bot_support_new{
+.bot_support_Sales{
     align-items: center;
     justify-content: center;
     display: flex;
@@ -83,7 +83,7 @@
 #bots_id{
     overflow-x: hidden;
 }
-#botnew_oq{
+#botSales_oq{
     bottom: 10px;
     right: 20px;
     position: fixed;
@@ -105,7 +105,7 @@
 #bots_id h1 {}
 
 #bots_id h2 {
-	font-size: 1.1rem;
+	font-size: 1rem;
 	 font-weight: 700;
 }
 
@@ -118,7 +118,7 @@
     background: #2196f3;
 }
 
-.bg-lightnew {
+.bg-lightSales {
 	background: hsla(231, 10%, 90%, 0.8);
 }
 
@@ -126,13 +126,13 @@
 	color: #f0f0f0;
 }
 
-.align-centernew {
+.align-centerSales {
 	text-align: center;
 }
 
 /*** NAV ***/
 
-#bots_id nav#nav-containernew {
+#botsSales_id nav#nav-containerSales {
 	background: #4c4e4f;
 	padding: 8px;
 	position: absolute;
@@ -152,7 +152,7 @@
 #bots_id .nav-link {
 	padding: 2px 0;
 	margin: 8px 0;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	position: relative;
 	padding-left: 15px;
 }
@@ -163,12 +163,20 @@
 	left: 0;
 }
 
+a {
+    --a-button-hover-background-color: white;
+}
+
 
 #bots_id a,
 #bots_id button,
 #bots_id .link,
 #bots_id .nav-link {
 	cursor: pointer;
+}
+
+#bots_id a:hover{
+    color : #fff;
 }
 
 #bots_id .btn-transparent {
@@ -187,7 +195,7 @@
 
 /**************************/
 
-#phone-wrappernew {
+#phone-wrappernewSales {
 	/*margin: 50px auto;*/
 	/*background: url("https://cdn.pixabay.com/photo/2017/06/17/10/39/cell-phone-2411808_960_720.png") 0 0;*/
 	/*background: url("https://cdn.pixabay.com/photo/2017/06/17/10/39/cell-phone-2411808_960_720.png") -418px 0px;*/
@@ -209,7 +217,7 @@
 
 
 
-#appnew {
+#appSales {
 	background: #ffffff;
 	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"); 
 	position: relative;
@@ -252,7 +260,7 @@
 }
 
 #bots_id input#username_o {
-	font-size: 1.1rem;
+	font-size: 1rem;
 	line-height: 2.5rem;
 	text-align: center;
 	border-radius: 5px;
@@ -262,15 +270,15 @@
     color: black;
 }
 
-#bots_id form#form-startnew {
+#bots_id form#form-startSales {
 	align-self: end;
 }
 
-#start-chatnew {
+#start-chatSales {
 	background: #FF9800;
 	border: none;
 	padding: 15px 30px;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color: #ffffff;
 	border-radius: 5px;
 	width: 100%;
@@ -282,14 +290,14 @@
 
 /********************/
 
-#headernew,
-#formnew {
+#headerSales,
+#formSales {
 	display: flex;
 justify-content: space-between;
 	align-items: center;
-}
+   }
 
-#headernew {
+#headerSales {
 	padding: 10px;
     /* background-color: #f2f2f7;
     padding: 10px;
@@ -297,7 +305,7 @@ justify-content: space-between;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px; */
     /* background-color: #007bff; */
-    background-image: linear-gradient(to right, #420a64, #8e24aa);
+   background: linear-gradient(to right, #680EAD, #EB6E2C);
     color: #ffffff;
     text-align: center;
     border-radius: 0 0 0px 0px;
@@ -306,11 +314,11 @@ justify-content: space-between;
 
 /* Conversation */
 
-#message-boardnew {
+#message-boardSales {
 	display: grid;
 	/* align-self: end; */
 	grid-auto-rows: minmax(min-content, max-content);
-	padding: 10px;
+	
 	box-sizing: border-box;
 	max-height: 100%;
 	overflow-x: hidden;
@@ -330,28 +338,27 @@ justify-content: space-between;
 	border-radius: 10px;
     /* font-family: Arial, sans-serif; */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	word-break: break-word;
     margin-left: 36px;
-    overflow: overlay;
 }
 
-#bots_id .post-user {
+/* #bots_id .post-user {
 	justify-self: right;
 	margin-right: 17px;
-	/* background: rgba(255, 152, 0, 0.1); */
+	
     background: #673ab7;
     color: white;
-	/*border-top-left-radius: 0;*/
+	
 }
 
 .post-bot {
 	justify-self: left;
 	margin-left: 50px;
-    /* background: #e6e6e6; */
+  
 	
     margin-top: 15px !important;
-    /* width: 278px !important; */
+    
 }
 
 .post:after {
@@ -373,10 +380,9 @@ justify-content: space-between;
 
 .post-bot:after {
 	left: -10px;
-	/* border-right-color: rgba(64, 83, 191, 0.1); */
-    /* border-right-color:rgb(230 230 230); */
+
 	border-left: 0;
-}
+} */
 
 
 .timestamp {
@@ -389,7 +395,7 @@ justify-content: space-between;
 
 /* Chat Form */
 
-#formnew {
+#formSales {
 	padding: 6px;
     /* position: absolute; */
     bottom: 0px;
@@ -398,8 +404,9 @@ justify-content: space-between;
     display: flex;
     align-items: center;
     /* padding: 10px; */
-    border-top: 2px solid #0056b3;
+    /* border-top: 2px solid #0056b3; */
 }
+
 
 
 #emoijis {
@@ -411,9 +418,9 @@ justify-content: space-between;
 	margin-bottom: 5px;
 }
 
-#messagenew {
+#messageSales {
 	padding: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     min-height: 25px;
     max-height: 25vh;
     overflow: auto;
@@ -430,7 +437,7 @@ justify-content: space-between;
     margin-right: 10px;
 }
 
-#messagenew1 {
+#messageSales1 {
 	display: flex;
     padding: 3px;
     font-size: 1rem;
@@ -445,18 +452,18 @@ justify-content: space-between;
     width: 285px;
     /* width: calc(100% - 40px); */
     border: 1px solid #d1d1d6;
-    border-radius: 10px;
+    border-radius:25px;
     flex: 1;
     margin-right: 14px;
+
 }
 
 
-
-#formnew.focus {
+#formSales.focus {
 	background: rgba(255, 152, 0, 0.1);
 }
 
-#messagenew.focus {
+#messageSales.focus {
 	/* background: rgba(0, 0, 0, 0.288); */
     background: rgba(0, 0, 0, 0.05);
 }
@@ -583,7 +590,7 @@ body {
 }
 
 
-#headernew h1 {
+#headerSales h1 {
     font-size: 20px;
     margin: 0;
 }
@@ -591,7 +598,7 @@ body {
 
 
 
-#sendnew {
+#sendSales {
      /* background-color: #007bff; */
     /* color: #007aff; */
     color: #032460;
@@ -653,8 +660,8 @@ body {
     margin: 10px auto; /* Center table horizontally */
     font-size: 0.7em; /* Smaller font size for better fit */
     font-family: 'Arial', sans-serif;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Lighter shadow */
-    table-layout: fixed; /* Ensure columns stay evenly spaced */
+    box-shadow: -3px 5px 5px #680EAD, 3px -3px 3px #EB6E2E; /* Lighter shadow */
+    /* Ensure columns stay evenly spaced */
 }
 
 /* .styled-table thead tr {
@@ -817,10 +824,10 @@ thead {
         }   
 
           button#back-btn {
-            background-color: #f01d1d; /* Blue */
+            background: linear-gradient(to right, #680EAD, #EB6E2C);
+            border-radius: 15px;
             border: none;
             color: white;
-                border-radius: 4px;
             padding: 5px 10px;
             text-align: center;
             text-decoration: none;
@@ -831,30 +838,11 @@ thead {
                 margin-left: 0px;
         } 
 
-        .back-btn {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.back-btn:hover {
-    background-color: #c82333;
-    transform: scale(1.05);
-}
-
-
         button#back {
-            background-color: #700f0f; /* Blue */
+            background: linear-gradient(to right, #680EAD, #EB6E2C);
+            border-radius: 15px;
             border: none;
-            color: white;
-                border-radius: 4px;
+            color: white;    
             padding: 5px 10px;
             text-align: center;
             text-decoration: none;
@@ -866,10 +854,10 @@ thead {
         } 
 
         button#approval-btn {
-            background-color: #1d7e32; /* Blue */
+            background: linear-gradient(to right, #680EAD, #EB6E2C);
+            border-radius: 15px;
             border: none;
             color: white;
-                border-radius: 4px;
             padding: 5px 10px;
             text-align: center;
             text-decoration: none;
@@ -881,10 +869,10 @@ thead {
         }
 
         button#insight-btn {
-            background-color: #3b5beb; /* Blue */
+            background: linear-gradient(to right, #680EAD, #EB6E2C);
+            border-radius: 15px;
             border: none;
             color: white;
-                border-radius: 4px;
             padding: 5px 10px;
             text-align: center;
             text-decoration: none;
@@ -899,7 +887,7 @@ thead {
             background-color: #dc3545;; /* Blue */
             border: none;
             color: white;
-                border-radius: 4px;
+            border-radius: 4px;
             padding: 5px 10px;
             text-align: center;
             text-decoration: none;
@@ -940,7 +928,8 @@ thead {
 
 
         .bot-button {
-            background-color: #008cba; 
+           background: linear-gradient(to right, #680EAD, #EB6E2C);
+            border-radius: 15px;
             border: none;
             color: white;
             /* padding: 10px 20px; */
@@ -954,10 +943,10 @@ thead {
         }
 
         .add-btn {
-            background-color: #008cba; /* Blue */
+            background: linear-gradient(to right, #680EAD, #EB6E2C);
+            border-radius: 15px;
             border: none;
             color: white;
-                border-radius: 4px;
             padding: 5px 10px;
             text-align: center;
             text-decoration: none;
@@ -969,8 +958,8 @@ thead {
 
          .option1 {
             border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 5px;
+            border-radius: 15px;
+            /* padding: 5px; */
             margin-top: 5px;
             margin-bottom: 5px;
             /* background-color: #f9f9f9;  */
@@ -984,10 +973,9 @@ thead {
     width: 50px;
     text-align: right;
 }
-
   .payment-option {
             border: 1px solid #198754; /* Adjust the border color */
-            border-radius: 5px;
+            border-radius: 15px;
             padding: 2px;
             margin-top: 5px;
             margin-bottom: 5px;
@@ -1006,7 +994,7 @@ thead {
     }
 
     .styled-table thead tr {
-        background-color: #009879;
+        
         color: #131111;
         text-align: left;
     }
@@ -1047,7 +1035,7 @@ thead {
     background-color: #008cba; /* Blue */
             border: none;
             color: white;
-                border-radius: 4px;
+                border-radius: 15px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -1063,7 +1051,7 @@ thead {
     background-color: #008cba; /* Blue */
             border: none;
             color: white;
-                border-radius: 4px;
+                border-radius: 15px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -1079,7 +1067,7 @@ thead {
     background-color: #008cba; /* Blue */
             border: none;
             color: white;
-                border-radius: 4px;
+                border-radius: 15px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -1094,7 +1082,7 @@ thead {
     background-color: #008cba; /* Blue */
             border: none;
             color: white;
-                border-radius: 4px;
+                border-radius: 15px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -1110,7 +1098,7 @@ thead {
     background-color: #008cba; /* Blue */
             border: none;
             color: white;
-                border-radius: 4px;
+                border-radius: 15px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -1126,7 +1114,7 @@ thead {
     background-color: #008cba; /* Blue */
             border: none;
             color: white;
-                border-radius: 4px;
+                border-radius: 15px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -1142,7 +1130,7 @@ thead {
     background-color: #008cba; /* Blue */
             border: none;
             color: white;
-                border-radius: 4px;
+                border-radius: 15px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -1164,6 +1152,371 @@ thead {
     line-height: 1.6;
 }
 
-.styled-table th, .styled-table td{
-    width:75px;
+
+
+
+#bot-response-container-1730102455996-paragraph-0{
+    max-width: 380px;
+}
+
+#bot-response-container-1730102459619{
+    max-width: 380px;
+}
+
+
+.post-user {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    position: relative;
+}
+.post-user-wrapper {
+      display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 10px;
+    /* / padding-right: 15px; / */
+    box-sizing: border-box;
+    background-color: #e1d4e19c;
+    padding: 20px;
+}
+
+/* / Message bubble styling / */
+.user-message-content {
+   background-color: #d0e8ff;
+    padding: 13px;
+    border-radius: 30px 30px 0px 30px;
+   
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-right: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* / position: relative; / */
+    z-index: 1;
+    right: 21px;
+    bottom: 12px;
+    font-size: 15px;
+}
+
+/* / Profile image styling aligned to the bottom-right side / */
+.user-profile {
+    bottom: -5px;
+    z-index: 2;
+    position: relative;
+    top: 24px;
+}
+
+/* .user-profile {
+    position: absolute;
+    bottom: -5px; 
+    right: -5px; 
+    z-index: 2;
+} */
+
+.user-profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d0e8ff; 
+}
+
+
+.option2 ,.option3 , .option4,.option5  {
+     position: relative;
+    background-color: #fff; 
+    border-radius: 12px;
+    padding: 5px 6px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    box-shadow: -3px 5px 5px #680EAD, 3px -3px 3px #EB6E2E;
+    width: 78px;
+}
+
+.option2::before {
+    content: "4";
+    position: absolute;
+    top: -16px;
+    left: -4px;
+    background: linear-gradient(to right, #680EAD, #EB6E2C);
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); 
+}
+.option3::before {
+    content: "5";
+    position: absolute;
+    top: -16px;
+    left: -4px;
+    background: linear-gradient(to right, #680EAD, #EB6E2C);
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+.option2.selected, .option3.selected ,.option4.selected, .option5.selected  {
+    background: linear-gradient(to right, #680EAD, #EB6E2C);
+    color: #fff;
+}
+
+
+.option2:hover, .option3:hover ,.option4:hover, .option5:hover {
+    background: linear-gradient(to right, #680EAD, #EB6E2C);
+    color: white;
+}
+
+
+
+              body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 15px;
+        }
+        
+        .todo-container {
+            max-width: 500px;
+            margin-left: 10px;
+        }
+        
+        .todo-header {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .todo-list{
+            margin-top: 25px;
+        }
+        
+        .todo-item {
+            margin-top: 5px;
+            display: flex;
+           
+            align-items: stretch; 
+            margin-bottom: 5px;
+            position: relative;
+            /* / background: linear-gradient(to right, #9b59b6, #8e44ad); /
+            / background: #bebcc2; /
+            / border: 1px solid linear-gradient(to right, #680EAD, #EB6E2C); / */
+            border-radius: 8px;
+            cursor: pointer;
+            /* / / color: white; / / */
+        }
+
+        /* .todo-item:hover {
+            background: #e6d9ff;
+        } */
+        .todo-item:hover {
+     background: linear-gradient(to right, #680EAD, #EB6E2C);
+     color: white;
+   
+}
+
+          .todo-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            padding: 2px;
+            background: linear-gradient(to right, #680EAD, #EB6E2C);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .todo-number {
+            margin-right: 8px;
+            font-weight: bold;
+        }
+        
+        .todo-text {
+            flex-grow: 1;
+            padding: 7px;
+            /* / / display: flex; / / */
+            align-items: center;
+            font-size: 16px;
+        }
+ 
+        .todo-arrow {
+            /* / / width: 41px; / / */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(to right, #EB6E2C, #680EAD);
+            border-left: 1px solid rgba(255,255,255,0.2);
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        
+        /* .todo-arrow::after {
+            content: '❯';
+            font-size: 24px;
+            color: white;
+        } */
+
+ .right {
+   display: inline-block;
+    width: 1.7em;
+    height: 1.7em;
+    border: 0.2em solid #fff;
+    border-radius: 50%;
+    margin-left: 0.4em;
+    margin-right: 0.5em;
+}
+
+.right:after {
+    content: '';
+    display: inline-block;
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    width: 0.7em;
+    height: 0.7em;
+    border-top: 0.2em solid #fff;
+    border-right: 0.2em solid #fff;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+        
+        .back-button {
+            background: linear-gradient(to right, #680EAD, #EB6E2C);
+            border-radius: 15px;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            width: auto;
+        }
+        
+        .action-text {
+            margin: 15px 0;
+            color: #333;
+        }
+
+
+
+
+.styled-table tbody tr:hover{
+     background: linear-gradient(to right, #680EAD, #EB6E2C);
+     color: white;
+
+}
+
+
+
+
+
+#voice-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+/* #voice {
+    font-size: 24px;
+    color: white; 
+} */
+#voice {
+    font-size: 24px;
+    color: transparent; 
+    background-image: linear-gradient(to right, #680EAD, #EB6E2C); /*Gradient for mic icon */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Allows gradient to show as text color */
+}
+
+
+/* Dots container - hidden by default */
+#dots {
+    display: none; /* Hidden until activated */
+    gap: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dot styling and animation */
+.dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: pulseDot 1s infinite ease-in-out;
+}
+
+.dots .dot:nth-child(1) {
+    background-color: #4285F4; /* Google blue */
+    animation-delay: 0s;
+}
+
+.dots .dot:nth-child(2) {
+    background-color: #FBBC05; /* Google yellow */
+    animation-delay: 0.2s;
+}
+
+.dots .dot:nth-child(3) {
+    background-color: #34A853; /* Google green */
+    animation-delay: 0.4s;
+}
+
+/*Pulse animation for dots */
+@keyframes pulseDot {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.6;
+    }
+}
+
+/* When the container is active, hide the mic and show the dots */
+#voice-container.active #voice {
+    display: none;
+}
+
+#voice-container.active #dots {
+    display: flex; /* Show dots when active */
 }
